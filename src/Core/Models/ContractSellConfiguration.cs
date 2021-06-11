@@ -2,6 +2,7 @@ namespace Core.Models
 {
     public class ContractSellConfiguration
     {
-        public double Delta { get; set; }
+        public double LessThanDelta { get; set; }
+        public double GreaterThanPercentageOfPrice { get; set; }
     }
 }

@@ -2,6 +2,6 @@ namespace Core.Models
 {
     public class ContractCloseConfiguration
     {
-        public decimal PercentageOfPremium { get; set; }
+        public double PercentageOfPremium { get; set; }
     }
 }

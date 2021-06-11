@@ -13,15 +13,16 @@ namespace Core.Tests.Interfaces.IOptionTrader
             
         }
         [Theory, AutoData]
-        public void Should_Return_Put_Close_Price(Option option, ContractCloseConfiguration configuration)
+        public void Should_Return_Put_Close_Price(Stock stock, ContractCloseConfiguration configuration)
         {
-            option.Premium = 1.0M;
-            configuration.PercentageOfPremium = .7M;
+            stock.Options[0].Premium=1.0;
+            
+            configuration.PercentageOfPremium = .7;
 
             var trader = new OptionTrader();
-            var closeOption = trader.CloseOptionContract(option, configuration, OptionType.Put);
+            var closeOption = trader.CloseOptionContract(stock, configuration, OptionType.Put);
 
-            closeOption.StrikePrice.ShouldBe(option.Premium * configuration.PercentageOfPremium);
+            closeOption.StrikePrice.ShouldBe(stock.Options[0].Premium * configuration.PercentageOfPremium);
 
         }
     }
