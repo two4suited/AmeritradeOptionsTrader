@@ -5,7 +5,7 @@ namespace Core.Interfaces
 {
     public interface IOptionTrader
     {
-         Option SellOptionContract(List<Option> Options,ContractSellConfiguration configuration,OptionType optionType);
-         Option CloseOptionContract(Option option,ContractCloseConfiguration configuration, OptionType optionType);
+         OptionTransaction SellOptionContract(Stock stock,ContractSellConfiguration configuration,OptionType optionType);
+         OptionTransaction CloseOptionContract(Stock option,ContractCloseConfiguration configuration, OptionType optionType);
     }
 }

@@ -21,7 +21,7 @@ namespace Core.Tests.Interfaces.IOptionTrader
             var trader = new OptionTrader();
             var closeOption = trader.CloseOptionContract(option, configuration, OptionType.Put);
 
-            closeOption.Premium.ShouldBe(option.Premium * configuration.PercentageOfPremium);
+            closeOption.StrikePrice.ShouldBe(option.Premium * configuration.PercentageOfPremium);
 
         }
     }

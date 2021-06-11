@@ -11,12 +11,12 @@ namespace Core.Services
         {
         }
 
-        public Option CloseOptionContract(Option option, ContractCloseConfiguration configuration, OptionType optionType)
+        public OptionTransaction CloseOptionContract(Stock stock, ContractCloseConfiguration configuration, OptionType optionType)
         {
             throw new NotImplementedException();
         }
 
-        public Option SellOptionContract(List<Option> Options, ContractSellConfiguration configuration, OptionType optionType)
+        public OptionTransaction SellOptionContract(Stock stock, ContractSellConfiguration configuration, OptionType optionType)
         {
             throw new NotImplementedException();
         }
