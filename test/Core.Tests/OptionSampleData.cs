@@ -13,7 +13,7 @@ namespace Core.Tests
             {
                 Stock.Options.Add(
                     new Option(){
-                        ExpirationDate=new System.DateOnly(2022,1,22),
+                        ExpirationDate=new System.DateTime(2022,1,22),
                         Delta=1-(i*.1),
                         StrikePrice=i,
                         Premium=21.0-i

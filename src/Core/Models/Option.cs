@@ -7,7 +7,7 @@ namespace Core.Models
         public string Symbol { get; set; }
         public string Id => $"{Symbol}{ExpirationDate.Day}{ExpirationDate.Month}{ExpirationDate.Year}{StrikePrice}{OptionType.ToString()}100";
         public double StrikePrice { get; init; }
-        public DateOnly ExpirationDate { get; init; }        
+        public DateTime ExpirationDate { get; init; }        
         public int OpenInterest { get; init; }       
         public double Delta { get; init; } 
         public double Theta { get; init; } 

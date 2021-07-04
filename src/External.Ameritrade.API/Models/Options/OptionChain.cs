@@ -47,10 +47,10 @@ namespace External.Ameritrade.API.Models.Options
         public long NumberOfContracts { get; set; }
 
         [JsonPropertyName("putExpDateMap")]
-        public Dictionary<string, Dictionary<string, Option[]>> PutExpDateMap { get; set; }
+        public Dictionary<string, Dictionary<string, Option[]>> Puts { get; set; }
 
         [JsonPropertyName("callExpDateMap")]
-        public Dictionary<string, Dictionary<string, Option[]>> CallExpDateMap { get; set; }
+        public Dictionary<string, Dictionary<string, Option[]>> Calls { get; set; }
     }
 
     public partial class Option
@@ -204,6 +204,11 @@ namespace External.Ameritrade.API.Models.Options
     public enum PutCall { Call, Put };
 
     public enum SettlementType { Empty };
+
+    public partial class OptionChain
+    {
+        public static OptionChain FromJson(string json) => JsonConvert.DeserializeObject<OptionChain>(json, Converter.Settings);
+    }
 
     internal static class Converter
     {
