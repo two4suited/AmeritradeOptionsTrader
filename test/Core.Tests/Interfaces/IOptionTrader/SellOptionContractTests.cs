@@ -15,7 +15,7 @@ namespace Core.Tests.Interfaces.IOptionTrader
             stock.Price=10;
 
             var optionTrader = new OptionTrader();
-            var transaction = optionTrader.SellOptionContract(stock,configuration,OptionType.Put)
+            var transaction = optionTrader.SellOptionContract(stock,configuration,OptionType.Put);
 
             
 
