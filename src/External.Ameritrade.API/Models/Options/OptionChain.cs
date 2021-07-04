@@ -3,195 +3,197 @@ namespace External.Ameritrade.API.Models.Options
     using System;
     using System.Collections.Generic;
     using System.Globalization;
+    using System.Text.Json;
+    using System.Text.Json.Serialization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
     public partial class OptionChain
     {
-        [JsonProperty("symbol")]
+        [JsonPropertyName("symbol")]
         public string Symbol { get; set; }
 
-        [JsonProperty("status")]
+        [JsonPropertyName("status")]
         public string Status { get; set; }
 
-        [JsonProperty("underlying")]
+        [JsonPropertyName("underlying")]
         public object Underlying { get; set; }
 
-        [JsonProperty("strategy")]
+        [JsonPropertyName("strategy")]
         public string Strategy { get; set; }
 
-        [JsonProperty("interval")]
+        [JsonPropertyName("interval")]
         public long Interval { get; set; }
 
-        [JsonProperty("isDelayed")]
+        [JsonPropertyName("isDelayed")]
         public bool IsDelayed { get; set; }
 
-        [JsonProperty("isIndex")]
+        [JsonPropertyName("isIndex")]
         public bool IsIndex { get; set; }
 
-        [JsonProperty("interestRate")]
+        [JsonPropertyName("interestRate")]
         public double InterestRate { get; set; }
 
-        [JsonProperty("underlyingPrice")]
+        [JsonPropertyName("underlyingPrice")]
         public double UnderlyingPrice { get; set; }
 
-        [JsonProperty("volatility")]
+        [JsonPropertyName("volatility")]
         public long Volatility { get; set; }
 
-        [JsonProperty("daysToExpiration")]
+        [JsonPropertyName("daysToExpiration")]
         public long DaysToExpiration { get; set; }
 
-        [JsonProperty("numberOfContracts")]
+        [JsonPropertyName("numberOfContracts")]
         public long NumberOfContracts { get; set; }
 
-        [JsonProperty("putExpDateMap")]
+        [JsonPropertyName("putExpDateMap")]
         public Dictionary<string, Dictionary<string, Option[]>> PutExpDateMap { get; set; }
 
-        [JsonProperty("callExpDateMap")]
+        [JsonPropertyName("callExpDateMap")]
         public Dictionary<string, Dictionary<string, Option[]>> CallExpDateMap { get; set; }
     }
 
     public partial class Option
     {
-        [JsonProperty("putCall")]
+        [JsonPropertyName("putCall")]
         public PutCall PutCall { get; set; }
 
-        [JsonProperty("symbol")]
+        [JsonPropertyName("symbol")]
         public string Symbol { get; set; }
 
-        [JsonProperty("description")]
+        [JsonPropertyName("description")]
         public string Description { get; set; }
 
-        [JsonProperty("exchangeName")]
+        [JsonPropertyName("exchangeName")]
         public ExchangeName ExchangeName { get; set; }
 
-        [JsonProperty("bid")]
+        [JsonPropertyName("bid")]
         public double Bid { get; set; }
 
-        [JsonProperty("ask")]
+        [JsonPropertyName("ask")]
         public double Ask { get; set; }
 
-        [JsonProperty("last")]
+        [JsonPropertyName("last")]
         public double Last { get; set; }
 
-        [JsonProperty("mark")]
+        [JsonPropertyName("mark")]
         public double Mark { get; set; }
 
-        [JsonProperty("bidSize")]
+        [JsonPropertyName("bidSize")]
         public long BidSize { get; set; }
 
-        [JsonProperty("askSize")]
+        [JsonPropertyName("askSize")]
         public long AskSize { get; set; }
 
-        [JsonProperty("bidAskSize")]
+        [JsonPropertyName("bidAskSize")]
         public string BidAskSize { get; set; }
 
-        [JsonProperty("lastSize")]
+        [JsonPropertyName("lastSize")]
         public long LastSize { get; set; }
 
-        [JsonProperty("highPrice")]
+        [JsonPropertyName("highPrice")]
         public double HighPrice { get; set; }
 
-        [JsonProperty("lowPrice")]
+        [JsonPropertyName("lowPrice")]
         public double LowPrice { get; set; }
 
-        [JsonProperty("openPrice")]
+        [JsonPropertyName("openPrice")]
         public long OpenPrice { get; set; }
 
-        [JsonProperty("closePrice")]
+        [JsonPropertyName("closePrice")]
         public double ClosePrice { get; set; }
 
-        [JsonProperty("totalVolume")]
+        [JsonPropertyName("totalVolume")]
         public long TotalVolume { get; set; }
 
-        [JsonProperty("tradeDate")]
+        [JsonPropertyName("tradeDate")]
         public object TradeDate { get; set; }
 
-        [JsonProperty("tradeTimeInLong")]
+        [JsonPropertyName("tradeTimeInLong")]
         public long TradeTimeInLong { get; set; }
 
-        [JsonProperty("quoteTimeInLong")]
+        [JsonPropertyName("quoteTimeInLong")]
         public long QuoteTimeInLong { get; set; }
 
-        [JsonProperty("netChange")]
+        [JsonPropertyName("netChange")]
         public long NetChange { get; set; }
 
-        [JsonProperty("volatility")]
+        [JsonPropertyName("volatility")]
         public long Volatility { get; set; }
 
-        [JsonProperty("delta")]
+        [JsonPropertyName("delta")]
         public long Delta { get; set; }
 
-        [JsonProperty("gamma")]
+        [JsonPropertyName("gamma")]
         public long Gamma { get; set; }
 
-        [JsonProperty("theta")]
+        [JsonPropertyName("theta")]
         public long Theta { get; set; }
 
-        [JsonProperty("vega")]
+        [JsonPropertyName("vega")]
         public long Vega { get; set; }
 
-        [JsonProperty("rho")]
+        [JsonPropertyName("rho")]
         public long Rho { get; set; }
 
-        [JsonProperty("openInterest")]
+        [JsonPropertyName("openInterest")]
         public long OpenInterest { get; set; }
 
-        [JsonProperty("timeValue")]
+        [JsonPropertyName("timeValue")]
         public double TimeValue { get; set; }
 
-        [JsonProperty("theoreticalOptionValue")]
+        [JsonPropertyName("theoreticalOptionValue")]
         public long TheoreticalOptionValue { get; set; }
 
-        [JsonProperty("theoreticalVolatility")]
+        [JsonPropertyName("theoreticalVolatility")]
         public long TheoreticalVolatility { get; set; }
 
-        [JsonProperty("optionDeliverablesList")]
+        [JsonPropertyName("optionDeliverablesList")]
         public object OptionDeliverablesList { get; set; }
 
-        [JsonProperty("strikePrice")]
+        [JsonPropertyName("strikePrice")]
         public long StrikePrice { get; set; }
 
-        [JsonProperty("expirationDate")]
+        [JsonPropertyName("expirationDate")]
         public long ExpirationDate { get; set; }
 
-        [JsonProperty("daysToExpiration")]
+        [JsonPropertyName("daysToExpiration")]
         public long DaysToExpiration { get; set; }
 
-        [JsonProperty("expirationType")]
+        [JsonPropertyName("expirationType")]
         public ExpirationType ExpirationType { get; set; }
 
-        [JsonProperty("lastTradingDay")]
+        [JsonPropertyName("lastTradingDay")]
         public long LastTradingDay { get; set; }
 
-        [JsonProperty("multiplier")]
+        [JsonPropertyName("multiplier")]
         public long Multiplier { get; set; }
 
-        [JsonProperty("settlementType")]
+        [JsonPropertyName("settlementType")]
         public SettlementType SettlementType { get; set; }
 
-        [JsonProperty("deliverableNote")]
+        [JsonPropertyName("deliverableNote")]
         public string DeliverableNote { get; set; }
 
-        [JsonProperty("isIndexOption")]
+        [JsonPropertyName("isIndexOption")]
         public object IsIndexOption { get; set; }
 
-        [JsonProperty("percentChange")]
+        [JsonPropertyName("percentChange")]
         public long PercentChange { get; set; }
 
-        [JsonProperty("markChange")]
+        [JsonPropertyName("markChange")]
         public double MarkChange { get; set; }
 
-        [JsonProperty("markPercentChange")]
+        [JsonPropertyName("markPercentChange")]
         public double MarkPercentChange { get; set; }
 
-        [JsonProperty("nonStandard")]
+        [JsonPropertyName("nonStandard")]
         public bool NonStandard { get; set; }
 
-        [JsonProperty("inTheMoney")]
+        [JsonPropertyName("inTheMoney")]
         public bool InTheMoney { get; set; }
 
-        [JsonProperty("mini")]
+        [JsonPropertyName("mini")]
         public bool Mini { get; set; }
     }
 
@@ -220,11 +222,11 @@ namespace External.Ameritrade.API.Models.Options
         };
     }
 
-    internal class ExchangeNameConverter : JsonConverter
+    internal class ExchangeNameConverter : Newtonsoft.Json.JsonConverter
     {
         public override bool CanConvert(Type t) => t == typeof(ExchangeName) || t == typeof(ExchangeName?);
 
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type t, object existingValue, Newtonsoft.Json.JsonSerializer serializer)
         {
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
@@ -235,7 +237,7 @@ namespace External.Ameritrade.API.Models.Options
             throw new Exception("Cannot unmarshal type ExchangeName");
         }
 
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
+        public override void WriteJson(JsonWriter writer, object untypedValue, Newtonsoft.Json.JsonSerializer serializer)
         {
             if (untypedValue == null)
             {
@@ -254,11 +256,11 @@ namespace External.Ameritrade.API.Models.Options
         public static readonly ExchangeNameConverter Singleton = new ExchangeNameConverter();
     }
 
-    internal class ExpirationTypeConverter : JsonConverter
+    internal class ExpirationTypeConverter : Newtonsoft.Json.JsonConverter
     {
         public override bool CanConvert(Type t) => t == typeof(ExpirationType) || t == typeof(ExpirationType?);
 
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type t, object existingValue, Newtonsoft.Json.JsonSerializer serializer)
         {
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
@@ -272,7 +274,7 @@ namespace External.Ameritrade.API.Models.Options
             throw new Exception("Cannot unmarshal type ExpirationType");
         }
 
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
+        public override void WriteJson(JsonWriter writer, object untypedValue, Newtonsoft.Json.JsonSerializer serializer)
         {
             if (untypedValue == null)
             {
@@ -295,11 +297,11 @@ namespace External.Ameritrade.API.Models.Options
         public static readonly ExpirationTypeConverter Singleton = new ExpirationTypeConverter();
     }
 
-    internal class PutCallConverter : JsonConverter
+    internal class PutCallConverter : Newtonsoft.Json.JsonConverter
     {
         public override bool CanConvert(Type t) => t == typeof(PutCall) || t == typeof(PutCall?);
 
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type t, object existingValue, Newtonsoft.Json.JsonSerializer serializer)
         {
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
@@ -313,7 +315,7 @@ namespace External.Ameritrade.API.Models.Options
             throw new Exception("Cannot unmarshal type PutCall");
         }
 
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
+        public override void WriteJson(JsonWriter writer, object untypedValue, Newtonsoft.Json.JsonSerializer serializer)
         {
             if (untypedValue == null)
             {
@@ -336,11 +338,11 @@ namespace External.Ameritrade.API.Models.Options
         public static readonly PutCallConverter Singleton = new PutCallConverter();
     }
 
-    internal class SettlementTypeConverter : JsonConverter
+    internal class SettlementTypeConverter : Newtonsoft.Json.JsonConverter
     {
         public override bool CanConvert(Type t) => t == typeof(SettlementType) || t == typeof(SettlementType?);
 
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type t, object existingValue, Newtonsoft.Json.JsonSerializer serializer)
         {
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
@@ -351,7 +353,7 @@ namespace External.Ameritrade.API.Models.Options
             throw new Exception("Cannot unmarshal type SettlementType");
         }
 
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
+        public override void WriteJson(JsonWriter writer, object untypedValue, Newtonsoft.Json.JsonSerializer serializer)
         {
             if (untypedValue == null)
             {

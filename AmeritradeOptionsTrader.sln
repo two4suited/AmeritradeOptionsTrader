@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "External.Ameritrade.API", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5D3ABB55-6F25-425F-8CE0-5638DDA25B9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "External.Ameritrade.API.Tests", "test\External.Ameritrade.API.Tests\External.Ameritrade.API.Tests.csproj", "{043CE8A6-8648-4457-952C-6E7855D5D282}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,8 +76,21 @@ Global
 		{D9333EBB-8998-40B6-A198-46213B51A323}.Release|x64.Build.0 = Release|Any CPU
 		{D9333EBB-8998-40B6-A198-46213B51A323}.Release|x86.ActiveCfg = Release|Any CPU
 		{D9333EBB-8998-40B6-A198-46213B51A323}.Release|x86.Build.0 = Release|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Debug|x64.Build.0 = Debug|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Debug|x86.Build.0 = Debug|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Release|x64.ActiveCfg = Release|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Release|x64.Build.0 = Release|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Release|x86.ActiveCfg = Release|Any CPU
+		{043CE8A6-8648-4457-952C-6E7855D5D282}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FE4828BA-F893-4B2C-B893-10FB9FDEBFE5} = {5D3ABB55-6F25-425F-8CE0-5638DDA25B9B}
+		{043CE8A6-8648-4457-952C-6E7855D5D282} = {5D3ABB55-6F25-425F-8CE0-5638DDA25B9B}
 	EndGlobalSection
 EndGlobal
