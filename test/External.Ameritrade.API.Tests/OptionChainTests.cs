@@ -13,7 +13,7 @@ namespace External.Ameritrade.API.Tests
         public OptionChainTests()
         {
             _jsonString = File.ReadAllText(@"files/optionchain.json");                        
-            _optionChain = OptionChain.FromJson(_jsonString);
+            _optionChain = JsonSerializer.Deserialize<OptionChain>(_jsonString);
         }
 
         [Fact]
@@ -25,15 +25,30 @@ namespace External.Ameritrade.API.Tests
         [Fact]
         public void ValidMaps_Option_Puts_ShouldNotBeNull()
         {
-            var puts = _optionChain.Puts;
-            puts.ShouldNotBeNull();
+            var puts = _optionChain.Puts["2021-07-09:5"]["138.0"];
+            puts.ShouldNotBeEmpty();
         }
+
+        [Fact]
+        public void ValidMaps_Option_Puts_DaysToExpire_ShouldBe5()
+        {
+            var puts = _optionChain.Puts["2021-07-09:5"]["138.0"];
+            puts[0].DaysToExpiration.ShouldBe(5);
+        }
+
 
         [Fact]
         public void ValidMaps_Option_Calls_ShouldNotBeNull()
         {
-            var calls = _optionChain.Calls ;
+            var calls = _optionChain.Calls["2021-07-09:5"]["138.0"] ;
             calls.ShouldNotBeNull();
+        }
+
+        [Fact]
+        public void ValidMaps_Option_Calls_DaysToExpire_ShouldBe5()
+        {
+            var calls = _optionChain.Calls["2021-07-09:5"]["138.0"] ;
+            calls[0].DaysToExpiration.ShouldBe(5);
         }
     }
 }
