@@ -5,7 +5,7 @@ namespace Core.Models
     public class Option
     {       
         public string Symbol { get; set; }
-        public string Id => $"{Symbol}{ExpirationDate.Day}{ExpirationDate.Month}{ExpirationDate.Year}{StrikePrice}{OptionType.ToString()}100";
+        public string Id {get;set;}
         public double StrikePrice { get; init; }
         public DateTime ExpirationDate { get; init; }        
         public int OpenInterest { get; init; }       
