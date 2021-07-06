@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Core.Enums;
 using Core.Models;
 using External.Ameritrade.API.Models.Options;
 
@@ -18,6 +20,21 @@ namespace External.Ameritrade.API.Mappings
 
             stock.Symbol = _optionChain.Symbol;
             stock.Price = _optionChain.UnderlyingPrice;
+
+            foreach(var expDate in _optionChain.Puts)
+            {                
+                foreach(var stikePrice in expDate.Value){
+                    foreach(var option in stikePrice.Value){
+                        var optionAdd = new Core.Models.Option(){
+                            Id=option.Symbol,
+                            PutCall = PutCall.PUT,
+                            Delta=option.Delta,
+                            Vega=option.Vega
+                        };
+                        stock.Options.Add(optionAdd);
+                    }
+                }
+            }
 
             return stock;
         }

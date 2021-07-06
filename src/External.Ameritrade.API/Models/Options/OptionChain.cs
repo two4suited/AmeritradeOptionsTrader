@@ -121,7 +121,7 @@ namespace External.Ameritrade.API.Models.Options
         public long Volatility { get; set; }
 
         [JsonPropertyName("delta")]
-        public long Delta { get; set; }
+        public double Delta { get; set; }
 
         [JsonPropertyName("gamma")]
         public long Gamma { get; set; }
@@ -195,13 +195,5 @@ namespace External.Ameritrade.API.Models.Options
         [JsonPropertyName("mini")]
         public bool Mini { get; set; }
     }
-
-    public enum ExchangeName { Opr };
-
-    public enum ExpirationType { R, S };
-
-    public enum PutCall { Call, Put };
-
-    public enum SettlementType { Empty };
 
 }

@@ -16,7 +16,7 @@ namespace External.Ameritrade.API.Tests
                 ClosePrice=0.51,
                 DaysToExpiration=5,
                 DeliverableNote="",
-                Delta=-999,
+                Delta=0.34,
                 Description="AAPL Jul 9 2021 138 Put (Weekly)",
                 ExchangeName="OPR",
                 ExpirationDate=1625860800000,
