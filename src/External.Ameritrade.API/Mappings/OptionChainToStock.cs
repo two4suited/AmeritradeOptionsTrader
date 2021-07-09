@@ -16,12 +16,13 @@ namespace External.Ameritrade.API.Mappings
 
         public Stock MapToStock()
         {
-            var stock = new Stock();
+            var stock = new Stock
+            {
+                Symbol = _optionChain.Symbol,
+                Price = _optionChain.UnderlyingPrice
+            };
 
-            stock.Symbol = _optionChain.Symbol;
-            stock.Price = _optionChain.UnderlyingPrice;
-
-            foreach(var expDate in _optionChain.Puts)
+            foreach (var expDate in _optionChain.Puts)
             {                
                 foreach(var stikePrice in expDate.Value){
                     foreach(var option in stikePrice.Value){
