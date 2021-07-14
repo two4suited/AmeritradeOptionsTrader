@@ -5,6 +5,7 @@ namespace Core.Tests
 {
     public class OptionSampleData
     {
+        /*
         public OptionSampleData()
         {
             Stock = new Stock() { Symbol="AMC" };            
@@ -20,6 +21,7 @@ namespace Core.Tests
                     });                  
             }
         }
+        */
         public Stock Stock{get;set;}
     }
 }

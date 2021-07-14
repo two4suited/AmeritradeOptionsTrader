@@ -7,6 +7,7 @@ namespace Core.Tests.Interfaces.IOptionTrader
 {
     public class SellOptionContractTests
     {
+        /*
         [Theory,AutoData]
         public void Should_Pick_Right_Option_Based_On_Configuration(Stock stock,ContractSellConfiguration configuration)
         {
@@ -16,10 +17,7 @@ namespace Core.Tests.Interfaces.IOptionTrader
 
             var optionTrader = new OptionTrader();
             var transaction = optionTrader.SellOptionContract(stock,configuration,OptionType.Put);
-
-            
-
-
         }
+        */
     }
 }

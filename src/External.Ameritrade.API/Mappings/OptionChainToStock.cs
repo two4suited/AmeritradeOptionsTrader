@@ -30,7 +30,9 @@ namespace External.Ameritrade.API.Mappings
                             Id=option.Symbol,
                             PutCall = PutCall.PUT,
                             Delta=option.Delta,
-                            Vega=option.Vega
+                            Vega=option.Vega,
+                            ImpliedVolatility=option.Volatility,
+                            Mid=option.Mark
                         };
                         stock.Options.Add(optionAdd);
                     }

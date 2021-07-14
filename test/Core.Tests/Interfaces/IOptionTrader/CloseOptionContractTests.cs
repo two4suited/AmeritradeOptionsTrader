@@ -12,6 +12,7 @@ namespace Core.Tests.Interfaces.IOptionTrader
         {
             
         }
+        /*
         [Theory, AutoData]
         public void Should_Return_Put_Close_Price(Stock stock, ContractCloseConfiguration configuration)
         {
@@ -25,5 +26,6 @@ namespace Core.Tests.Interfaces.IOptionTrader
             closeOption.StrikePrice.ShouldBe(stock.Options[0].Premium * configuration.PercentageOfPremium);
 
         }
+        */
     }
 }

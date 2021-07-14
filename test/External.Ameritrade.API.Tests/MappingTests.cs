@@ -109,5 +109,23 @@ namespace External.Ameritrade.API.Tests
 
             stock.Options[0].Vega.ShouldBe(GetPutOption().Vega);
         }
+        [Fact]
+        public void CheckStock_Map_MidPrice()
+        {
+            var mapper = new OptionChainToStock(_optionChain);
+
+            var stock = mapper.MapToStock();
+
+            stock.Options[0].Mid.ShouldBe(GetPutOption().Mark);
+        }
+        [Fact]
+        public void CheckStock_Map_ImpliedVolatility()
+        {
+            var mapper = new OptionChainToStock(_optionChain);
+
+            var stock = mapper.MapToStock();
+
+            stock.Options[0].ImpliedVolatility.ShouldBe(GetPutOption().Volatility);
+        }
     }
 }
